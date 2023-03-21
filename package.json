@@ -2,13 +2,18 @@
   "name": "electron-vue",
   "version": "0.1.0",
   "private": true,
+  "main": "main.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "start": "vue-cli-service build && electron ."
   },
   "dependencies": {
     "core-js": "^3.8.3",
+    "crypto-browserify": "^3.12.0",
+    "node-polyfill-webpack-plugin": "^2.0.1",
+    "path-browserify": "^1.0.1",
     "vue": "^3.2.13",
     "vue-router": "^4.0.3"
   },
@@ -19,6 +24,7 @@
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-plugin-router": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
+    "electron": "^23.1.4",
     "eslint": "^7.32.0",
     "eslint-plugin-vue": "^8.0.3"
   },
